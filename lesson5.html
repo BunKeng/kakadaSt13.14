@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <input type="text" id="fname" class="formcontrol" placeholder="FirstName">
+    <input type="text" id="lname" class="formcontrol" placeholder="LastName">
+    <button id="btn-submit" class="btn btn-primary">submit</button>
+    <script>
+        // $('#btn-submit').on('click',function(){
+        //     var pass = true;
+        //     if ( $('#fname').val().lenght)
+        // })
+       $(document).ready(()=>{
+            $('#btn-submit').on('click',() => {
+                var pass = true;
+                var FirstName = fname.val
+                if ( $('#fname').focus().val().length <= 0){
+                    pass = false;
+                    alert('please input something in FirstName')
+                }
+                else if( $('#lname').focus().val().length <= 0){
+                    pass = false;
+                    alert('please input something in LastName')
+                }
+                if(pass = false){
+                    alert('please insert something in box')
+                }
+            })
+       })
+    </script>
+</body>
+</html>
